@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav-contenedor{
+    position: sticky;
+    top: 0;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    height: 12vh;
+    background-color: black;
+}
+
+.navbar-logo{
+    justify-self: start;
+    margin-left: 20px;
+    color: white;
+    margin-top: 4vh;
+   
+}
+
+.mostrar-carrito img{
+    margin-right: 20px;
+    margin-top: 3vh;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;  
+}
+
+.cartel{
+    background-image: url(./img/fondo-river.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+}
+
+.cartel-container{
+    padding: 15px 0;
+    text-align: center;
+
+}
+
+.cartel h2{
+    font-size: 25px;
+    color: white;
+
+}
+
+.cartel p{
+    font-size: 15px;
+    color: white;
+}
