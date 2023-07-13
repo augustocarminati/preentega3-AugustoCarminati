@@ -17,7 +17,7 @@ const productos = [
 
 {
     id: 3,
-    nombre: "conjunto titular camiseta y pantalon river temporada23/24",
+    nombre: "conjunto oficial completo temporada 23/24",
     precio: 40000,
     imagen: "https://pasionmonumental.com/wp-content/uploads/2023/06/177A09602.jpg",
 },
