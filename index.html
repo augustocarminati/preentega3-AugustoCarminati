@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +8,14 @@
     <link rel="stylesheet" href="./styles.css">
     <title>Tienda Somos River</title>
 </head>
+
 <body>
     <div class="nav-contenedor">
         <nav class="navbar">
-            <h1 class="navbar-logo">Somos River</h1>
-            <button id="mostrarCarrito"><a class="mostrar-carrito" href=""><img src="./img/carrito-de-compras.png" alt="carrito-compras"></a></button>
+            <h1 class="navbar-logo">SOMOS RIVER SA</h1>
+            <button id="mostrarCarrito" class="nav-button">
+                <img src="./img/carrito-de-compras.png" alt="shop-cart" width="40px">
+            </button>
         </nav>
     </div>
 
@@ -25,10 +29,18 @@
 
     <div id="contenidoTienda" class="contenido-tienda"></div>
 
-    <div id="carritoContenedor" class="carrito-contenedor"></div>
+    <div id="carritoContenedor" class="carrito-contenedor">
+        <div class="carrito-header">
+            <h3>Carrito</h3>
+            <button id="close"> X </button>
+        </div>
+        <div id="products"></div>
+    </div>
 
-<script src="./productos.js"></script>
-<script src="./app.js"></script>
-    
+
+    <script src="./productos.js"></script>
+    <script src="./app.js"></script>
+
 </body>
+
 </html>
