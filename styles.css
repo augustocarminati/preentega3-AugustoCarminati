@@ -1,99 +1,99 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-.nav-contenedor{
+  }
+  
+  .nav-contenedor {
     position: sticky;
     top: 0;
-}
-
-.navbar{
+  }
+  
+  .navbar {
     display: flex;
     justify-content: space-between;
     height: 12vh;
     background-color: black;
-}
-
-.navbar-logo{
+  }
+  
+  .navbar-logo {
     justify-self: start;
     margin-left: 2em;
     color: white;
     margin-top: 2em;
     font-size: 2em;
-   
-}
-
-.nav-button{
+  }
+  
+  .nav-button {
     margin-right: 3em;
     margin-top: 2em;
     cursor: pointer;
     background-color: black;
     border-style: none;
-}
-
-.cartel{
+  }
+  
+  .cartel {
     background-image: url(./img/fondo-river.jpg);
     background-size: cover;
     background-position: center;
     height: 70vh;
-}
-
-.cartel-container{
+  }
+  
+  .cartel-container {
     padding: 1em 0;
     text-align: center;
-
-}
-
-.cartel h2{
+  }
+  
+  .cartel h2 {
     font-size: 25px;
     color: white;
-
-}
-
-.cartel p{
+  }
+  
+  .cartel p {
     font-size: 1em;
     color: white;
-}
-
-.contenido-tienda{
+  }
+  
+  .contenido-tienda {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     margin-top: 2rem;
     margin-left: 3rem;
     margin-right: 3rem;
-}
-
-.tarjeta-productos{
+  }
+  
+  .tarjeta-productos {
     max-width: 350px;
-    box-shadow: 0 .5rem .8rem 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 0.8rem 0 rgba(0, 0, 0, 0.2);
     text-align: center;
     justify-content: space-around;
-    
-}
-
-.tarjeta-productos > img{
+  }
+  
+  .tarjeta-productos > img {
     width: 90%;
     height: 250px;
-    padding-bottom: .5rem;
-    
-}
-
-.tarjeta-productos button{
+    padding-bottom: 0.5rem;
+  }
+  
+  .tarjeta-productos button {
     border: none;
     outline: 0;
-    padding: .6rem;
+    padding: 0.6rem;
     color: white;
     background-color: black;
     text-align: center;
     cursor: pointer;
     width: 100%;
     font-size: 1em;
-    margin-top: .5rem;
-}
-
-.tarjeta-productos button:hover {
+    margin-top: 0.5rem;
+  }
+  
+  .tarjeta-productos button:hover {
     opacity: 0.7;
-}
+  }
+  
+  .carrito-contenedor {
+    display: none;
+  }
+  

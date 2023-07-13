@@ -1,88 +1,102 @@
-let carrito = [];
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 // declaro variables
 const contenidoTienda = document.getElementById("contenidoTienda");
 const mostrarCarrito = document.getElementById("mostrarCarrito");
 const cerrarCarrito = document.getElementById("close");
 const carritoContenedor = document.getElementById("carritoContenedor");
+const total = document.getElementById("total");
 
-//declaro metodo para recorrer carrito y creo contenedor para productos con sus propiedades
+/** Creo los productos en el carrito al momento de hacer click en comprar. */
+const createProductInCart = (products) => {
+  const productsContainer = document.getElementById("products");
+  const productsCard = document.createElement("div");
+  productsCard.className = "products-card";
 
-productos.forEach((products) => {
-    let contenido = document.createElement("div");
-    contenido.className = "tarjeta-productos";
-    contenido.innerHTML = `
-    <img src="${products.imagen}">
-    <h3>${products.nombre}</h3>
-    <p class="precio-producto">$ ${products.precio}</p>
-    `;
-
-    contenidoTienda.append(contenido);
-
-    let comprar = document.createElement("button");
-    comprar.innerText = "comprar";
-    comprar.className = "boton-comprar"
-
-    contenido.append(comprar)
-
-    comprar.addEventListener("click", () => {
-        carrito.push({
-            imagen: products.imagen,
-            nombre: products.nombre,
-            precio: products.precio,
-        });
-        console.log(carrito)
-    })
-});
-
-//abro modal y muestro productos seleccionados
-
-mostrarCarrito.addEventListener("click", () => {
-    document.getElementById("carritoContenedor").style.display = "block";
-    const productsContainer = document.getElementById("products");
-    let productsCard = document.createElement("div");
-    productsCard.className = "products-card";
-
-    carrito.forEach((product) => {
-        productsCard.innerHTML = `
+  productsCard.innerHTML = `
               <div>
                   <img
-                  src="${product.imagen}"
+                  src="${products.imagen}"
                   alt="buzo"
                   width="50px"
                   height="50px"
               />
               </div>
               <div>
-                  <h2>${product.nombre}</h2>
-                  <p>$ ${product.precio}</p>
+                  <h2>${products.nombre}</h2>
+                  <p>$ ${products.precio}</p>
               </div>
           `;
 
-        productsContainer.append(productsCard);
+  productsContainer.append(productsCard);
+};
 
-    });
+/** Renderizo los productos en el carrito. */
+const renderProducts = (products, contenido) => {
+  contenido.className = "tarjeta-productos";
+  contenido.innerHTML = `
+      <img src="${products.imagen}">
+      <h3>${products.nombre}</h3>
+      <p class="precio-producto">$ ${products.precio}</p>
+      `;
 
-    const total = carrito.reduce((acc, el) => acc + el.precio, 0);
+  contenidoTienda.append(contenido);
+};
 
-    const totalBuying = document.createElement("div");
-    totalBuying.className = "total-content";
-    totalBuying.innerHTML = `total a pagar:$ ${total}`;
-    carritoContenedor.append(totalBuying);
+/** Pusheo los productos en el array del carrito. */
+const pushProductInCartArray = (products) => {
+  carrito.push({
+    imagen: products.imagen,
+    nombre: products.nombre,
+    precio: products.precio,
+  });
+};
 
+/** Calculo el total del carrito. */
+const calculateTotal = () => {
+  const productsTotal = carrito.reduce((acc, el) => acc + el.precio, 0);
+  total.innerHTML = "";
+  total.append(productsTotal);
+};
 
+/** Recorro los productos, creo el boton comprar y guardo los productos en el carrito.  */
+productos.forEach((products) => {
+  let contenido = document.createElement("div");
+
+  renderProducts(products, contenido);
+
+  let comprar = document.createElement("button");
+  comprar.innerText = "comprar";
+  comprar.className = "boton-comprar";
+
+  contenido.append(comprar);
+
+  comprar.addEventListener("click", () => {
+    pushProductInCartArray(products);
+    createProductInCart(products);
+    calculateTotal();
+    guardadoLocal();
+  });
+});
+
+/** Muestro los productos del localStorage en el carrito y hago el calculo del total. */
+if (carrito.length) {
+  carrito.forEach((product) => {
+    createProductInCart(product);
+    calculateTotal();
+  });
+}
+
+mostrarCarrito.addEventListener("click", () => {
+  document.getElementById("carritoContenedor").style.display = "block";
 });
 
 /** Cierro modal */
 cerrarCarrito.addEventListener("click", () => {
-    document.getElementById("carritoContenedor").style.display = "none";
+  document.getElementById("carritoContenedor").style.display = "none";
 });
 
-
 //aplico localStorage
-
-
 const guardadoLocal = () => {
-    
-    localStorage.setItem("cart", JSON.stringify(carrito));
+  localStorage.setItem("carrito", JSON.stringify(carrito));
 };

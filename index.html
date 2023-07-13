@@ -1,44 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
     <title>Tienda Somos River</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="nav-contenedor">
-        <nav class="navbar">
-            <h1 class="navbar-logo">SOMOS RIVER SA</h1>
-            <button id="mostrarCarrito" class="nav-button">
-                <img src="./img/carrito-de-compras.png" alt="shop-cart" width="40px">
-            </button>
-        </nav>
+      <nav class="navbar">
+        <h1 class="navbar-logo">SOMOS RIVER SA</h1>
+        <button id="mostrarCarrito" class="nav-button">
+          <img
+            src="./img/carrito-de-compras.png"
+            alt="shop-cart"
+            width="40px"
+          />
+        </button>
+      </nav>
     </div>
 
     <div class="cartel">
-        <div class="cartel-container">
-            <h2>Tienda oficial Somos River</h2>
-            <p>Somos la tienda de venta de indumentaria oficial de River Plate Nº1 en Argentina</p>
-        </div>
+      <div class="cartel-container">
+        <h2>Tienda oficial Somos River</h2>
+        <p>
+          Somos la tienda de venta de indumentaria oficial de River Plate Nº1 en
+          Argentina
+        </p>
+      </div>
     </div>
 
     <div id="contenidoTienda" class="contenido-tienda"></div>
 
     <div id="carritoContenedor" class="carrito-contenedor">
-        <div class="carrito-header">
+      <div class="carrito-header">
         <h3>Carrito</h3>
-        <button id="close"> X </button>
-        </div>
-        <div id="products"></div>
+        <button id="close">X</button>
+      </div>
+      <div id="products"></div>
+      <div class="total-content">total a pagar: $ <span id="total"></span></div>
     </div>
 
-<script src="./productos.js"></script>
-<script src="./app.js"></script>
-
-</body>
-
+    <script src="./productos.js"></script>
+    <script src="./app.js"></script>
+  </body>
 </html>
