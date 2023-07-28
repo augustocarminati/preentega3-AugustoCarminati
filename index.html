@@ -1,49 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles.css" />
-    <title>Tienda Somos River</title>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/fav.png" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="sweetalert2.min.css" />
+
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>River Store</title>
   </head>
-
   <body>
-    <div class="nav-contenedor">
-      <nav class="navbar">
-        <h1 class="navbar-logo">SOMOS RIVER SA</h1>
-        <button id="mostrarCarrito" class="nav-button">
-          <img
-            src="./img/carrito-de-compras.png"
-            alt="shop-cart"
-            width="40px"
-          />
-        </button>
-      </nav>
-    </div>
-
-    <div class="cartel">
-      <div class="cartel-container">
-        <h2>Tienda oficial Somos River</h2>
-        <p>
-          Somos la tienda de venta de indumentaria oficial de River Plate Nº1 en
-          Argentina
-        </p>
+    <header class="header">
+      <div class="container">
+        <a href="./index.html">
+          <h1 class="logo">River Store</h1>
+        </a>
+        <nav class="nav">
+          <ul class="nav__list"></ul>
+          <div id="total"></div>
+          <a href="#" class="btn-primary" id="btn-finalizar"
+            >Finalizar Compra</a
+          >
+        </nav>
+        <div class="bars__menu">
+          <i class="bx bxs-cart"></i><span id="countCarrito"></span>
+        </div>
       </div>
-    </div>
+    </header>
 
-    <div id="contenidoTienda" class="contenido-tienda"></div>
-
-    <div id="carritoContenedor" class="carrito-contenedor">
-      <div class="carrito-header">
-        <h3>Carrito</h3>
-        <button id="close">X</button>
+    <main class="home__hero">
+      <div class="container">
+        <h2>Productos</h2>
+        <div class="productos__container"></div>
       </div>
-      <div id="products"></div>
-      <div class="total-content">total a pagar: $ <span id="total"></span></div>
-    </div>
-
-    <script src="./productos.js"></script>
-    <script src="./app.js"></script>
+    </main>
+    <script src="./javascript/menu.js"></script>
+    <script type="text/javascript" src="./javascript/app.js" async></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </body>
 </html>

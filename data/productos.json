@@ -1,0 +1,69 @@
+[
+    {
+      "nombre": "camiseta titular temporada 23/24",
+      "precio": 28000,
+      "imagen": "https://pasionmonumental.com/wp-content/uploads/2023/06/177A03282.jpg",
+      "marca": "camiseta",
+      "id": 1
+    },
+    {
+      "nombre": "buzo titular temporada 23/24",
+      "precio": 40000,
+      "imagen": "https://pasionmonumental.com/wp-content/uploads/2023/07/177A58422.jpg",
+      "marca": "buzo",
+      "id": 2
+    },
+    {
+      "nombre": "conjunto oficial completo temporada 23/24",
+      "precio": 40000,
+      "imagen": "https://pasionmonumental.com/wp-content/uploads/2023/06/177A09602.jpg",
+      "marca": "conjunto",
+      "id": 3
+    },
+    {
+      "nombre": "camiseta suplente temporada 23/24",
+      "precio": 26000,
+      "imagen": "https://pasionmonumental.com/wp-content/uploads/2023/06/177A64522.jpg",
+      "marca": "camiseta",
+      "id": 4
+    },
+    {
+      "nombre": "campera/buzo temporada 23/24",
+      "precio": 45000,
+      "imagen": "https://pasionmonumental.com/wp-content/uploads/2023/07/NAB_47422.jpg",
+      "marca": "buzo",
+      "id": 5
+    },
+    {
+      "nombre": "conjunto oficial suplente temporada 23/24",
+      "precio": 38000,
+      "imagen": "https://pasionmonumental.com/wp-content/uploads/2023/06/177A64352.jpg",
+      "marca": "conjunto",
+      "id": 6
+    },
+    
+    {
+        "nombre": "conjunto oficial suplente temporada 23/24",
+        "precio": 38000,
+        "imagen": "https://pasionmonumental.com/wp-content/uploads/2023/05/177A01272.jpg",
+        "marca": "conjunto",
+        "id": 7
+      },
+
+      {
+        "nombre": "camiseta suplente temporada 23/24",
+        "precio": 28000,
+        "imagen": "https://pasionmonumental.com/wp-content/uploads/2023/05/177A97012.jpg",
+        "marca": "camiseta",
+        "id": 8
+      },
+
+      {
+        "nombre": "conjunto oficial suplente temporada 23/24",
+        "precio": 38000,
+        "imagen": "https://pasionmonumental.com/wp-content/uploads/2023/05/177A96672.jpg",
+        "marca": "conjunto",
+        "id": 9
+      }
+      
+  ]
